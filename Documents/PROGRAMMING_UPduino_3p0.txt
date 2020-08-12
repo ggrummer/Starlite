@@ -1,0 +1,23 @@
+Software Needed:
+
+* [Lattice Diamond/Radiant Programmer Standalone (Diamond v3.9 x64 used for programming instructions)](http://www.latticesemi.com/en/Products/DesignSoftwareAndIP/ProgrammingAndConfigurationSw/Programmer.aspx#_20C94305815A4B3AAAFEA8B83943B751).
+Note that Radiant is specific to iCE40 UP devices while Diamond supports other Lattice devices as well.
+* [Lattice iCECube2 Software](http://www.latticesemi.com/Products/DesignSoftwareAndIP/FPGAandLDS/iCEcube2.aspx#_4351BE10BA504435B5226390CF5D7D4C)
+
+
+Programming (SPI Flash):
+
+1. Plug the UPDuino v3.0 in to your PC using the micro USB port on the board
+2. Open the Radiant Programmer
+3. Click `Detect Cable` then `OK`
+4. After scanning select `Generic JTAG Device` and `Select iCE40 UltraPlus`
+5. Under `Device` click iCE40UP3K and change it to iCE40UP5K
+6. Under `Operation` double click `Fast Program` and change `Target Memory:` to `External SPI Flash Memory`
+7. Select your `*.hex` programming file under `Programming file`.
+8. Configure the following `SPI Flash Options`
+    a. Winbond 
+    b. W25Q32JV
+    c. 208mil 8-pin SOIC
+9. Click `Load from File` under `SPI Programming` to get load size
+10. Click OK
+11. Click `Run` -> `Program Device`
