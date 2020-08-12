@@ -1,0 +1,8 @@
+tasks2do_0.star_ctrl_0.instr_ram_inst.hi_1_ram256x16_inst	rays_bt_hi.mem
+tasks2do_0.star_ctrl_0.instr_ram_inst.hi_2_ram256x16_inst	rays_bnw_hi.mem
+tasks2do_0.star_ctrl_0.instr_ram_inst.hi_3_ram256x16_inst	fade_random_hi.mem
+tasks2do_0.star_ctrl_0.instr_ram_inst.hi_4_ram256x16_inst	burst6_bt_hi.mem
+tasks2do_0.star_ctrl_0.instr_ram_inst.lo_1_ram256x16_inst	rays_lo.mem
+tasks2do_0.star_ctrl_0.instr_ram_inst.lo_2_ram256x16_inst	rays_bnw_lo.mem
+tasks2do_0.star_ctrl_0.instr_ram_inst.lo_3_ram256x16_inst	fade_random_lo.mem
+tasks2do_0.star_ctrl_0.instr_ram_inst.lo_4_ram256x16_inst_physical	burst6_lo.mem

@@ -1,0 +1,8 @@
+hi_1_ram256x16_inst	spiral_hi.mem
+hi_2_ram256x16_inst	rays_hi.mem
+hi_3_ram256x16_inst	fade_red_hi.mem
+hi_4_ram256x16_inst	rainbow_hi.mem
+lo_1_ram256x16_inst	spiral_lo.mem
+lo_2_ram256x16_inst	rays_lo.mem
+lo_3_ram256x16_inst	fade_red_lo.mem
+lo_4_ram256x16_inst	rainbow_lo.mem

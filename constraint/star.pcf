@@ -1,0 +1,23 @@
+#################################
+# Starlite UPduino Design
+# Family & Device:    iCE40UP5K
+# Package:            SG48
+#################################
+
+###IOSet List 12
+
+# Inputs
+set_io disp_sel_n 25 -pullup yes
+set_io brite_sel_n 23 -pullup yes
+set_io osc12 20
+
+# Outputs to buffer 
+set_io buf_en 27
+set_io tx_data[0] 6
+set_io tx_data[1] 9
+set_io tx_data[2] 11
+set_io tx_data[3] 18
+set_io tx_data[4] 19
+set_io tx_data[5] 13
+set_io tx_data[6] 21
+set_io tx_data[7] 12
