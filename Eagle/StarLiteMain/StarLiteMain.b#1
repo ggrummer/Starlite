@@ -201,7 +201,7 @@
 <wire x1="36.116109375" y1="75.32461875" x2="43.15606875" y2="72.40856875" width="0.025" layer="51"/>
 <wire x1="30.48" y1="50.8" x2="30.48" y2="53.34" width="0.025" layer="51"/>
 <wire x1="35.144090625" y1="72.97796875" x2="42.18405" y2="70.06191875" width="0.025" layer="51"/>
-<text x="2.54" y="2.54" size="1.778" layer="21" rot="R90">FOR PROG ONLY</text>
+<text x="2.54" y="1.27" size="1.778" layer="21" rot="R90">PROG</text>
 <text x="53.975" y="48.26" size="1.778" layer="21" rot="R270">POWER INPUT</text>
 <text x="43.18" y="46.355" size="1.778" layer="21" rot="R180">STARLITEMAIN</text>
 <text x="39.37" y="43.815" size="1.778" layer="21" rot="R180">REV A.0</text>
@@ -214,6 +214,7 @@
 <text x="48.895" y="33.02" size="1.778" layer="21" rot="R180">+</text>
 <text x="37.465" y="79.375" size="1.778" layer="21" rot="R180">+</text>
 <wire x1="68.58" y1="83.82" x2="68.58" y2="0" width="0" layer="20"/>
+<text x="2.54" y="17.145" size="1.778" layer="21" rot="R90">ONLY</text>
 </plain>
 <libraries>
 <library name="capacitor-wima" urn="urn:adsk.eagle:library:116">

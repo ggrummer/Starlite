@@ -3625,15 +3625,15 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <pad name="35" x="-3.81" y="10.16" drill="0.9" shape="long" rot="R90"/>
 <pad name="31" x="-6.35" y="10.16" drill="0.9" shape="long" rot="R90"/>
 <pad name="37" x="-8.89" y="10.16" drill="0.9" shape="long" rot="R90"/>
-<pad name="5VA" x="-23.876" y="-1.905" drill="0.9" shape="long"/>
-<pad name="GND1" x="-23.876" y="-4.445" drill="0.9" shape="long" rot="R180"/>
+<pad name="5VA" x="-23.368" y="-1.905" drill="0.9" shape="long"/>
+<pad name="GND1" x="-23.368" y="-4.445" drill="0.9" shape="long" rot="R180"/>
 <text x="-27.686" y="-6.35" size="1.778" layer="25" ratio="10" rot="R90">&gt;NAME</text>
 <text x="-15.24" y="-0.889" size="1.778" layer="27" ratio="10">&gt;VALUE</text>
 <pad name="12M" x="16.51" y="-7.62" drill="0.9" shape="long" rot="R270"/>
 <pad name="GND3" x="19.05" y="-7.62" drill="0.9" shape="long" rot="R90"/>
-<wire x1="37.465" y1="5.08" x2="37.465" y2="-2.54" width="0.127" layer="21"/>
-<wire x1="37.465" y1="5.08" x2="36.195" y2="5.08" width="0.127" layer="21"/>
-<wire x1="37.465" y1="-2.54" x2="36.195" y2="-2.54" width="0.127" layer="21"/>
+<wire x1="31.115" y1="5.08" x2="31.115" y2="-2.54" width="0.127" layer="21"/>
+<wire x1="31.115" y1="5.08" x2="36.195" y2="5.08" width="0.127" layer="21"/>
+<wire x1="31.115" y1="-2.54" x2="36.195" y2="-2.54" width="0.127" layer="21"/>
 <pad name="34" x="-11.43" y="10.16" drill="0.9" shape="long" rot="R90"/>
 <pad name="43" x="-13.97" y="10.16" drill="0.9" shape="long" rot="R90"/>
 <pad name="36" x="-16.51" y="10.16" drill="0.9" shape="long" rot="R90"/>
@@ -16659,7 +16659,7 @@ with this version.
 <note version="8.3" severity="warning">
 Since Version 8.3, EAGLE supports URNs for individual library
 assets (packages, symbols, and devices). The URNs of those assets
-will not be understood (or retained) with this version.
+will not be understood (or retained) with this version. 
 </note>
 <note version="8.3" severity="warning">
 Since Version 8.3, EAGLE supports the association of 3D packages
