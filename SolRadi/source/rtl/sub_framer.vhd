@@ -44,6 +44,8 @@ architecture rtl of sub_framer is
 	
 	constant HI1_2812B : std_logic_vector (3 DOWNTO 0) := "0100"; -- 750 ns
 	constant HI1_6812  : std_logic_vector (3 DOWNTO 0) := "0011"; -- 625 ns
+	
+	constant RST_CODE  : std_logic_vector (3 DOWNTO 0) := x"8"; -- 80 us + 10 us more
    
    signal HI0CNT      : std_logic_vector (3 DOWNTO 0);
    signal LO0CNT      : std_logic_vector (3 DOWNTO 0);
@@ -80,7 +82,7 @@ begin
    LO1CNT <= LO1_6812 when TYPE_OF_LITE = 3 else LO1_2812B;
 	
 	
-	-- sync ce1 control input to 8.31 MHz clock
+	-- sync ce1 control input to 8 MHz clock
    go_proc : process (reset8, clkfast)
    begin
       if rising_edge(clkfast) then
@@ -222,7 +224,7 @@ begin
 					end if;
 				when INC =>
 					ten_us <= ten_us + '1'; 
-					if (ten_us = x"8") then
+					if (ten_us = RST_CODE) then
 						intersm <= DONE;
 					else
 						intersm <= HI5;
