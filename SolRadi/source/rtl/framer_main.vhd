@@ -9,6 +9,7 @@
 -- Revision: 0.1 added double sided lites support
 -- Revision: 0.2 for 24-bit module data input
 -- Revision: 0.3 added individual point blocking
+-- Revision: 0.4 reversed individual point blocking order
 -- 
 ---------------------------------------------------------------------
 
@@ -218,7 +219,7 @@ begin
 	-- point blocking is only available for the first 12 points
 	gen0: for i in 0 to NUM_OF_POINTS - 1 generate
 		genlo: if (i <= 11) generate
-			fm_val_vec(i) <= fm_valid and not point_block(i);
+			fm_val_vec(i) <= fm_valid and not point_block((NUM_OF_POINTS - 1) - i);
 		end generate genlo;
 		genhi: if (i > 11) generate
 			fm_val_vec(i) <= fm_valid; -- no blocking available

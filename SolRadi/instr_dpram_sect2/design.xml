@@ -1,13 +1,13 @@
 <?xml version="1.0" ?>
-<ipxact:design xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:lsccip="http://www.latticesemi.com/XMLSchema/Radiant/ip">
+<ipxact:design xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:lattice="http://www.latticesemi.com/lattice" xmlns:lsccip="http://www.latticesemi.com/XMLSchema/Radiant/ip">
     <ipxact:vendor>latticesemi.com</ipxact:vendor>
     <ipxact:library>module</ipxact:library>
     <ipxact:name>instr_dpram_sect2</ipxact:name>
-    <ipxact:version>1.1.1</ipxact:version>
+    <ipxact:version>1.1.2</ipxact:version>
     <ipxact:componentInstances>
         <ipxact:componentInstance>
             <ipxact:instanceName>lscc_ram_dp_inst</ipxact:instanceName>
-            <ipxact:componentRef library="module" name="ram_dp" vendor="latticesemi.com" version="1.1.1">
+            <ipxact:componentRef library="module" name="ram_dp" vendor="latticesemi.com" version="1.1.2">
                 <ipxact:configurableElementValues>
                     <ipxact:configurableElementValue referenceId="FAMILY">iCE40UP</ipxact:configurableElementValue>
                     <ipxact:configurableElementValue referenceId="T_FAMILY">iCE40UP</ipxact:configurableElementValue>
@@ -28,11 +28,11 @@
                     <ipxact:configurableElementValue referenceId="BYTE_SIZE">8</ipxact:configurableElementValue>
                     <ipxact:configurableElementValue referenceId="ECC_ENABLE">False</ipxact:configurableElementValue>
                     <ipxact:configurableElementValue referenceId="INIT_MODE">mem_file</ipxact:configurableElementValue>
-                    <ipxact:configurableElementValue referenceId="INIT_FILE">misc/fade_random_instr_dpram_sect2_copy.mem</ipxact:configurableElementValue>
+                    <ipxact:configurableElementValue referenceId="INIT_FILE">C:/Projects/Starlite/SolRadi/instr_dpram_sect2/misc/pointblocktest_instr_dpram_sect2_copy.mem</ipxact:configurableElementValue>
                     <ipxact:configurableElementValue referenceId="INIT_FILE_FORMAT">hex</ipxact:configurableElementValue>
                     <ipxact:configurableElementValue referenceId="buff_init_file">1</ipxact:configurableElementValue>
-                    <ipxact:configurableElementValue referenceId="INIT_VALUE_00">0x000020008FF070C01030306030503040303030203010300000005000B000A0000x0000000090001000000080008000800080008000800080010000200000000000</ipxact:configurableElementValue>
-                    <ipxact:configurableElementValue referenceId="INIT_VALUE_01">0x00000000000000000000000000000000000000000000000000000000000000000x0000000000000000000000000000000000000000000000000000000000000000</ipxact:configurableElementValue>
+                    <ipxact:configurableElementValue referenceId="INIT_VALUE_00">0xA0004064A0004063A0004063A0004063A0004063A0004063A0000000500070000x0FFD0F000FFB0FF00FF700F00FEF805F0FDF002F0FBF000F0F7F000020000000</ipxact:configurableElementValue>
+                    <ipxact:configurableElementValue referenceId="INIT_VALUE_01">0x000000000000000000000000000000000000000020008FF114004063A00040630x00000000000000000000000000000000000000000000100000000BBB0FFE0F0F</ipxact:configurableElementValue>
                     <ipxact:configurableElementValue referenceId="INIT_VALUE_02">0x00000000000000000000000000000000000000000000000000000000000000000x0000000000000000000000000000000000000000000000000000000000000000</ipxact:configurableElementValue>
                     <ipxact:configurableElementValue referenceId="INIT_VALUE_03">0x00000000000000000000000000000000000000000000000000000000000000000x0000000000000000000000000000000000000000000000000000000000000000</ipxact:configurableElementValue>
                     <ipxact:configurableElementValue referenceId="INIT_VALUE_04">0x00000000000000000000000000000000000000000000000000000000000000000x0000000000000000000000000000000000000000000000000000000000000000</ipxact:configurableElementValue>

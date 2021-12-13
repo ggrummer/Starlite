@@ -1,16 +1,19 @@
 <?xml version="1.0" ?>
-<RadiantModule architecture="iCE40UP" date="2021 03 10 15:03:52" device="iCE40UP5K" generator="ipgen" library="module" module="ram_dp" name="instr_dpram_sect2" package="SG48" source_format="Verilog" speed="High-Performance_1.2V" vendor="latticesemi.com" version="1.1.1">
+<RadiantModule architecture="iCE40UP" date="2021 12 13 13:34:19" device="iCE40UP5K" generator="ipgen" library="module" module="ram_dp" name="instr_dpram_sect2" package="SG48" source_format="Verilog" speed="High-Performance_1.2V" vendor="latticesemi.com" version="1.1.2">
  <Package>
-  <File modified="2021 03 10 15:03:51" name="rtl/instr_dpram_sect2_bb.v" type="black_box_verilog"/>
-  <File modified="2021 03 10 15:03:51" name="instr_dpram_sect2.cfg" type="cfg"/>
-  <File modified="2021 03 10 15:03:51" name="misc/instr_dpram_sect2_tmpl.v" type="template_verilog"/>
-  <File modified="2021 03 10 15:03:51" name="misc/instr_dpram_sect2_tmpl.vhd" type="template_vhdl"/>
-  <File modified="2021 03 10 15:03:51" name="rtl/instr_dpram_sect2.v" type="top_level_verilog"/>
-  <File modified="2021 03 10 15:03:52" name="constraints/instr_dpram_sect2.ldc" type="timing_constraints"/>
-  <File modified="2021 03 10 15:03:52" name="testbench/dut_params.v" type="dependency_file"/>
-  <File modified="2021 03 10 15:03:52" name="testbench/dut_inst.v" type="dependency_file"/>
-  <File modified="2021 03 10 15:03:52" name="component.xml" type="IP-XACT_component"/>
-  <File modified="2021 03 10 15:03:52" name="design.xml" type="IP-XACT_design"/>
-  <File modified="2020 03 31 02:50:37" name="testbench/tb_top.v" type="testbench_verilog"/>
+  <File modified="2021 12 13 13:34:19" name="rtl/instr_dpram_sect2_bb.v" type="black_box_verilog"/>
+  <File modified="2021 12 13 13:34:19" name="instr_dpram_sect2.cfg" type="cfg"/>
+  <File modified="2021 12 13 13:34:19" name="misc/instr_dpram_sect2_tmpl.v" type="template_verilog"/>
+  <File modified="2021 12 13 13:34:19" name="misc/instr_dpram_sect2_tmpl.vhd" type="template_vhdl"/>
+  <File modified="2021 12 13 13:34:19" name="rtl/instr_dpram_sect2.v" type="top_level_verilog"/>
+  <File modified="2021 12 13 13:34:19" name="constraints/instr_dpram_sect2.ldc" type="timing_constraints"/>
+  <File modified="2021 12 13 13:34:19" name="testbench/dut_params.v" type="dependency_file"/>
+  <File modified="2021 12 13 13:34:19" name="testbench/dut_inst.v" type="dependency_file"/>
+  <File modified="2021 12 13 13:34:19" name="component.xml" type="IP-XACT_component"/>
+  <File modified="2021 12 13 13:34:19" name="design.xml" type="IP-XACT_design"/>
+  <File modified="2021 06 01 01:46:34" name="testbench/clk_rst_gen.v" type="testbench_verilog"/>
+  <File modified="2021 06 01 01:46:34" name="testbench/mem_model.v" type="testbench_verilog"/>
+  <File modified="2021 06 01 01:46:34" name="testbench/pdp_master.v" type="testbench_verilog"/>
+  <File modified="2021 06 01 01:47:24" name="testbench/tb_top.v" type="testbench_verilog"/>
  </Package>
 </RadiantModule>

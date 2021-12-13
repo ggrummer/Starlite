@@ -1,9 +1,9 @@
 <?xml version="1.0" ?>
-<ipxact:component xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:lsccip="http://www.latticesemi.com/XMLSchema/Radiant/ip">
+<ipxact:component xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:lattice="http://www.latticesemi.com/lattice" xmlns:lsccip="http://www.latticesemi.com/XMLSchema/Radiant/ip">
     <ipxact:vendor>latticesemi.com</ipxact:vendor>
     <ipxact:library>module</ipxact:library>
     <ipxact:name>instr_dpram_sect0</ipxact:name>
-    <ipxact:version>1.1.1</ipxact:version>
+    <ipxact:version>1.1.2</ipxact:version>
     <ipxact:model>
         <ipxact:instantiations>
             <ipxact:componentInstantiation>
@@ -12,14 +12,13 @@
                     <ipxact:moduleParameter configGroups="SystemBuilder" parameterId="MEM_ID" resolve="generated" type="string">
                         <ipxact:name>MEM_ID</ipxact:name>
                         <ipxact:displayName>MEM_ID</ipxact:displayName>
-                        <ipxact:description/>
                         <ipxact:value>instr_dpram_sect0</ipxact:value>
                     </ipxact:moduleParameter>
                 </ipxact:moduleParameters>
             </ipxact:componentInstantiation>
             <ipxact:designInstantiation>
                 <ipxact:name>instr_dpram_sect0_design</ipxact:name>
-                <ipxact:designRef library="module" name="instr_dpram_sect0" vendor="latticesemi.com" version="1.1.1"/>
+                <ipxact:designRef library="module" name="instr_dpram_sect0" vendor="latticesemi.com" version="1.1.2"/>
             </ipxact:designInstantiation>
         </ipxact:instantiations>
         <ipxact:ports>
@@ -166,13 +165,25 @@
                 <ipxact:fileType user="IP-XACT_design">user</ipxact:fileType>
             </ipxact:file>
             <ipxact:file>
+                <ipxact:name>testbench/clk_rst_gen.v</ipxact:name>
+                <ipxact:fileType user="testbench_verilog">user</ipxact:fileType>
+            </ipxact:file>
+            <ipxact:file>
+                <ipxact:name>testbench/mem_model.v</ipxact:name>
+                <ipxact:fileType user="testbench_verilog">user</ipxact:fileType>
+            </ipxact:file>
+            <ipxact:file>
+                <ipxact:name>testbench/pdp_master.v</ipxact:name>
+                <ipxact:fileType user="testbench_verilog">user</ipxact:fileType>
+            </ipxact:file>
+            <ipxact:file>
                 <ipxact:name>testbench/tb_top.v</ipxact:name>
                 <ipxact:fileType user="testbench_verilog">user</ipxact:fileType>
             </ipxact:file>
         </ipxact:fileSet>
     </ipxact:fileSets>
     <ipxact:vendorExtensions>
-        <lsccip:moduleRef lsccip:library="module" lsccip:name="ram_dp" lsccip:vendor="latticesemi.com" lsccip:version="1.1.1"/>
+        <lsccip:moduleRef lsccip:library="module" lsccip:name="ram_dp" lsccip:vendor="latticesemi.com" lsccip:version="1.1.2"/>
         <lsccip:deviceInfo>
             <lsccip:architecture>iCE40UP</lsccip:architecture>
             <lsccip:device>iCE40UP5K</lsccip:device>
@@ -181,8 +192,8 @@
         </lsccip:deviceInfo>
         <lsccip:generationInfo>
             <lsccip:fileVersion>20180929</lsccip:fileVersion>
-            <lsccip:createdTimestamp>2021 03 07 13:14:25</lsccip:createdTimestamp>
-            <lsccip:radiantBuild>&quot;Lattice Radiant Software&quot; (64-bit) 2.1.0.27.2</lsccip:radiantBuild>
+            <lsccip:createdTimestamp>2021 12 13 13:22:14</lsccip:createdTimestamp>
+            <lsccip:radiantBuild>&quot;Lattice Radiant Software&quot; (64-bit) 3.0.0.24.1</lsccip:radiantBuild>
         </lsccip:generationInfo>
     </ipxact:vendorExtensions>
 </ipxact:component>
