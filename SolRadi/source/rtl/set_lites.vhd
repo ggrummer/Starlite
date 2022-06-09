@@ -13,8 +13,10 @@
 -- Revision 0.03 - Added random address support under command #3 
 -- Revision 0.04 - Added access to random color palette via command #9
 -- Revision 1.0  - Changed max number of lites from 25 to 63 and random 
---    select from bit 32 to bit 64
+--    select from cmd_data bit 25 to bit 26
 -- Revision 1.1  - Added rainbow module (rbow) signals
+-- Revision 1.2  - Added a test to prevent the same random color from appearing
+--    twice in a row
 -- 
 -------------------------------------------------------------------------------
 
@@ -47,8 +49,8 @@ end set_lites;
 architecture rtl of set_lites is
 
 
-   type setsm_type is (s_init,s_start,s_addrlim,s_num,s_dly1,s_color,
-      s_dly2,s_sel,s_go,s_wait,s_end);
+   type setsm_type is (s_init,s_start,s_addrlim,s_num,s_dly1,s_test,
+		s_dly3,s_color,s_dly2,s_sel,s_go,s_wait,s_end);
    signal setsm        : setsm_type;
    
    signal address      : STD_LOGIC_VECTOR (7 downto 0);
@@ -60,6 +62,7 @@ architecture rtl of set_lites is
    signal set_path     : STD_LOGIC;
    signal color        : STD_LOGIC_VECTOR (11 downto 0);
    signal calc_randnum : STD_LOGIC;
+	signal test_color   : STD_LOGIC;
    signal calc_color   : STD_LOGIC;
    signal calc_sel     : STD_LOGIC;
    signal calc_addr    : STD_LOGIC;
@@ -69,6 +72,7 @@ architecture rtl of set_lites is
    signal random_en    : STD_LOGIC;
    signal random       : STD_LOGIC_VECTOR (11 downto 0);
    signal nx_color     : STD_LOGIC_VECTOR (11 downto 0);
+	signal samecolor	  : STD_LOGIC;
    
    type palatte_type is array (0 to 15) of STD_LOGIC_VECTOR (11 downto 0);
    signal palette      : palatte_type :=
@@ -109,6 +113,7 @@ begin
          set_path     <= '0';
          addrsum      <= (others => '0');
          calc_randnum <= '0';
+			test_color	 <= '0';
          calc_color   <= '0';
          calc_sel     <= '0';
          calc_addr    <= '0';
@@ -143,7 +148,7 @@ begin
                setsm <= s_go; -- use color in command
             end if;
             if (addrsum >= sizeplus1) then
-               addrsum <= addrsum - sizeplus1;
+               addrsum  <= addrsum - sizeplus1;
             end if;
          when s_num =>
             -- no address and/or color change during fade
@@ -153,10 +158,20 @@ begin
             setsm <= s_dly1;
          when s_dly1 =>
             calc_randnum <= '0';
-            setsm        <= s_color;
-         when s_color =>
-            calc_color   <= '1';
-            setsm        <= s_dly2;
+            setsm        <= s_test;
+         when s_test =>
+				test_color	 <= '1';
+				setsm        <= s_dly3;
+			when s_dly3 =>
+				test_color	 <= '0';
+				setsm        <= s_color;
+			when s_color =>
+            if (samecolor = '1' and color_lat(1) = '1') then
+					setsm        <= s_num;
+				else
+					calc_color   <= '1';
+					setsm        <= s_dly2;
+				end if;
          when s_dly2 =>
             calc_color <= '0';
             setsm      <= s_sel;
@@ -211,8 +226,10 @@ begin
    end process;
    
    
+	-- random number generator
+	
    feedback <= random(10) xnor random(9);
-   -- random number generator
+	
    random_num_proc : process (reset8, clk8)
    begin
       if reset8 = '1' then
@@ -224,16 +241,33 @@ begin
          end if;
       end if;
    end process;
+	
+	
+	-- if random color is the same, recalculate color
+	colortest_proc : process (reset8, clk8)
+   begin
+      if reset8 = '1' then
+         samecolor <= '0'; 
+      elsif rising_edge(clk8) then
+         if (test_color = '1') then
+            if (pal_out = color) then
+					samecolor <= '1';
+				else
+					samecolor <= '0';
+				end if;
+         end if;
+      end if;
+   end process;
    
    
    -- based on the random number, selects from a list of available colors
    random_color_proc : process (reset8, clk8)
    begin
       if reset8 = '1' then
-         nx_color <= x"37C";
+         nx_color 	<= x"37C";
       elsif rising_edge(clk8) then
          if (calc_color = '1') then
-            nx_color <= pal_out;
+            nx_color 	<= pal_out;
          end if;
       end if;
    end process;
@@ -274,7 +308,7 @@ begin
    end process;
    
    
-   -- write to color palette
+   -- write enable, address and color to color palette
    palette_proc : process (reset8, clk8)
    begin
       if reset8 = '1' then
