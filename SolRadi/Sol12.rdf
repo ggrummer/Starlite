@@ -117,7 +117,16 @@
         <Source name="source/rtl/regmux24.vhd" type="VHDL" type_short="VHDL">
             <Options/>
         </Source>
+        <Source name="source/TestBenchs/set_lites_tb.vhd" type="VHDL" type_short="VHDL" syn_sim="SimOnly">
+            <Options/>
+        </Source>
         <Source name="ChaseStepSim/ChaseStepSim.spf" type="Simulation Project File" type_short="SPF">
+            <Options/>
+        </Source>
+        <Source name="SetLites/SetLites.spf" type="Simulation Project File" type_short="SPF">
+            <Options/>
+        </Source>
+        <Source name="SetTest/SetTest.spf" type="Simulation Project File" type_short="SPF">
             <Options/>
         </Source>
         <Source name="source/constraints/star.ldc" type="LSE Design Constraints File" type_short="LDC">
