@@ -237,7 +237,7 @@ BEGIN
 			
 			-- set LED 0 to random color
          cmd_inst <= x"3"; -- set random color instruction
-         cmd_data <= x"0008001"; 
+         cmd_data <= x"0008003"; 
          wait for 16 ns;
          cmd_inst <= x"F"; -- null instruction
          cmd_data <= x"0000000"; 
@@ -253,7 +253,7 @@ BEGIN
 			
 			-- set LED 1 to random color
          cmd_inst <= x"3"; -- set random color instruction
-         cmd_data <= x"0108001"; 
+         cmd_data <= x"0108003"; 
          wait for 16 ns;
          cmd_inst <= x"F"; -- null instruction
          cmd_data <= x"0000000"; 
@@ -269,7 +269,7 @@ BEGIN
 			
 			-- set LED 2 to random color
          cmd_inst <= x"3"; -- set random color instruction
-         cmd_data <= x"0208001"; 
+         cmd_data <= x"0208003"; 
          wait for 16 ns;
          cmd_inst <= x"F"; -- null instruction
          cmd_data <= x"0000000"; 
@@ -285,7 +285,7 @@ BEGIN
 			
 			-- set LED 3 to random color
          cmd_inst <= x"3"; -- set random color instruction
-         cmd_data <= x"0308001"; 
+         cmd_data <= x"0308003"; 
          wait for 16 ns;
          cmd_inst <= x"F"; -- null instruction
          cmd_data <= x"0000000"; 
@@ -301,7 +301,7 @@ BEGIN
 			
 			-- set LED 4 to random color
          cmd_inst <= x"3"; -- set random color instruction
-         cmd_data <= x"0408001"; 
+         cmd_data <= x"0408003"; 
          wait for 16 ns;
          cmd_inst <= x"F"; -- null instruction
          cmd_data <= x"0000000"; 
@@ -317,7 +317,7 @@ BEGIN
 			
 			-- set LED 5 to random color
          cmd_inst <= x"3"; -- set random color instruction
-         cmd_data <= x"0508001"; 
+         cmd_data <= x"0508003"; 
          wait for 16 ns;
          cmd_inst <= x"F"; -- null instruction
          cmd_data <= x"0000000"; 
@@ -333,7 +333,7 @@ BEGIN
 			
 			-- set LED 6 to random color
          cmd_inst <= x"3"; -- set random color instruction
-         cmd_data <= x"0608001"; 
+         cmd_data <= x"0608003"; 
          wait for 16 ns;
          cmd_inst <= x"F"; -- null instruction
          cmd_data <= x"0000000"; 
